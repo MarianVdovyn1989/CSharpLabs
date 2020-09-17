@@ -15,11 +15,6 @@ namespace SimCorp.IMS.CSharpPrepCourse
         #endregion
 
         #region Methods
-        public void Touch(IScreenTouch screen)
-        {
-            ScreenTouch.Touch(screen);
-        }
-
         public string GetMobileComponentsDescription()
         {
             var descriptionBuilder = new StringBuilder();

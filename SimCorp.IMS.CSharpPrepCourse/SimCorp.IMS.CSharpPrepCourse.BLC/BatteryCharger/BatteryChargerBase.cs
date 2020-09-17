@@ -1,13 +1,14 @@
-﻿using System;
+﻿using SimCorp.IMS.CSharpPrepCourse.BL;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SimCorp.IMS.CSharpPrepCourse
 {
-    public abstract class BatteryChargerBase
+    public abstract class BatteryChargerBase: IBatteryCharger
     {
         #region Constructors
-        public BatteryChargerBase(bool inductiveCharge, _ChargingTechnology chargingTechnology)
+        public BatteryChargerBase(_SupportInductiveCharge inductiveCharge, _ChargingTechnology chargingTechnology)
         {
             InductiveCharge = inductiveCharge;
             ChargingTechnology = chargingTechnology;
@@ -15,8 +16,8 @@ namespace SimCorp.IMS.CSharpPrepCourse
         #endregion
 
         #region Properties
-        //public bool _SupportInductiveCharge ;
-        public bool InductiveCharge;
+        public enum _SupportInductiveCharge { no, yes };
+        public _SupportInductiveCharge InductiveCharge;
 
         public enum _ChargingTechnology
         {
@@ -67,6 +68,8 @@ namespace SimCorp.IMS.CSharpPrepCourse
             }
         }
         public override abstract string ToString();
+
+        public abstract void ChargeBattery(object batteryCharger);
         #endregion
 
 

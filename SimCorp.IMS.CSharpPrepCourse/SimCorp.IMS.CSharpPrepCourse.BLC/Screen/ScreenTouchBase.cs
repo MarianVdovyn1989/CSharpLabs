@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace SimCorp.IMS.CSharpPrepCourse
+{
+    public abstract class ScreenTouchBase:ScreenBase,IScreenTouch
+    {
+        #region Ctor
+        public ScreenTouchBase():base()
+        {
+
+        }
+        public ScreenTouchBase(int pixelHeight, int pixelWidth):base(pixelHeight, pixelWidth) 
+        {
+
+        }
+        public ScreenTouchBase(int pixelHeight, int pixelWidth, double diagonalInInches):base( pixelHeight,  pixelWidth,  diagonalInInches)
+        {
+
+        }
+        #endregion
+
+        #region Properties
+        public string Sensor { get; set; }
+        public string Controller { get; set; }
+        public string Driver { get; set; }
+
+        public abstract void Touch(IScreenTouch touchScreen);
+        #endregion
+
+        #region Methods
+
+        #endregion
+    }
+}

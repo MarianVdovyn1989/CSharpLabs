@@ -6,7 +6,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BatteryCharger
 {
     public class OnePlusWarpCharge30 : BatteryChargerBase
     {
-        public OnePlusWarpCharge30(_SupportInductiveCharge inductiveCharge, _ChargingTechnology chargingTechnology) : base(inductiveCharge, chargingTechnology)
+        public OnePlusWarpCharge30(bool inductiveCharge, _ChargingTechnology chargingTechnology) : base(inductiveCharge, chargingTechnology)
         {
 
         }

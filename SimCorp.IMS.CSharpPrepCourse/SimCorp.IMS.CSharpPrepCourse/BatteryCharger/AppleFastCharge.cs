@@ -6,7 +6,7 @@ namespace SimCorp.IMS.CSharpPrepCourse
 {
     public class AppleFastCharge : BatteryChargerBase
     {
-        public AppleFastCharge(_SupportInductiveCharge inductiveCharge, _ChargingTechnology chargingTechnology):base(inductiveCharge, chargingTechnology)
+        public AppleFastCharge(bool inductiveCharge, _ChargingTechnology chargingTechnology):base(inductiveCharge, chargingTechnology)
         {
 
         }

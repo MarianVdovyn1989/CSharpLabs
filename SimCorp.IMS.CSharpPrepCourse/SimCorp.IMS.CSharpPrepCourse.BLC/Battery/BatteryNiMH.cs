@@ -4,15 +4,16 @@ using System.Text;
 
 namespace SimCorp.IMS.CSharpPrepCourse
 {
-    public class USB3_0 : BatteryChargerBase
+    public class BatteryNiMH : BatteryBase
     {
-        public USB3_0(bool inductiveCharge, _ChargingTechnology chargingTechnology) : base(inductiveCharge, chargingTechnology)
+        public BatteryNiMH(int? capacity, string manufacturer) : base(capacity, manufacturer)
         {
 
         }
+
         public override string ToString()
         {
-            return nameof(USB3_0);
+            return nameof(BatteryNiMH).ToString();
         }
     }
 }

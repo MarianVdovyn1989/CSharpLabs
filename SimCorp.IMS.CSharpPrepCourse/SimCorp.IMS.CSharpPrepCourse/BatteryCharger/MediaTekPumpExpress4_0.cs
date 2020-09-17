@@ -6,7 +6,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BatteryCharger
 {
     public class MediaTekPumpExpress4_0 : BatteryChargerBase
     {
-        public MediaTekPumpExpress4_0(_SupportInductiveCharge inductiveCharge, _ChargingTechnology chargingTechnology) : base(inductiveCharge, chargingTechnology)
+        public MediaTekPumpExpress4_0(bool inductiveCharge, _ChargingTechnology chargingTechnology) : base(inductiveCharge, chargingTechnology)
         {
 
         }

@@ -8,7 +8,7 @@ namespace SimCorp.IMS.CSharpPrepCourse
         {
             MobilePhone simCorpMobile = SimCorpMobile.Instance;
             Console.WriteLine(simCorpMobile.GetMobileComponentsDescription());
-            simCorpMobile.Touch(simCorpMobile.ScreenTouch);
+            simCorpMobile.ScreenTouch.Touch(simCorpMobile.ScreenTouch);
             Console.ReadLine(); 
         }
     }

@@ -6,7 +6,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BatteryCharger
 {
     public class HuaweiSuperCharge2_0 : BatteryChargerBase
     {
-        public HuaweiSuperCharge2_0(_SupportInductiveCharge inductiveCharge, _ChargingTechnology chargingTechnology) : base(inductiveCharge, chargingTechnology)
+        public HuaweiSuperCharge2_0(bool inductiveCharge, _ChargingTechnology chargingTechnology) : base(inductiveCharge, chargingTechnology)
         {
 
         }

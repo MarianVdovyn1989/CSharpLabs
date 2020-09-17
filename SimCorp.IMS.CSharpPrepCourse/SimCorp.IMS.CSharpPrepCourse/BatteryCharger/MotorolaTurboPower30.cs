@@ -6,7 +6,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BatteryCharger
 {
     public class MotorolaTurboPower30 : BatteryChargerBase
     {
-        public MotorolaTurboPower30(_SupportInductiveCharge inductiveCharge, _ChargingTechnology chargingTechnology) : base(inductiveCharge, chargingTechnology)
+        public MotorolaTurboPower30(bool inductiveCharge, _ChargingTechnology chargingTechnology) : base(inductiveCharge, chargingTechnology)
         {
 
         }

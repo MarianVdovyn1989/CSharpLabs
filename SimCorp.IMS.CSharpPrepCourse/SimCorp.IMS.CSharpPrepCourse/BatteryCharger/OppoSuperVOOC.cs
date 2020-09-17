@@ -6,7 +6,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BatteryCharger
 {
     public class OppoSuperVOOC : BatteryChargerBase
     {
-        public OppoSuperVOOC(_SupportInductiveCharge inductiveCharge, _ChargingTechnology chargingTechnology) : base(inductiveCharge, chargingTechnology)
+        public OppoSuperVOOC(bool inductiveCharge, _ChargingTechnology chargingTechnology) : base(inductiveCharge, chargingTechnology)
         {
 
         }
