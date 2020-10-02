@@ -1,16 +1,22 @@
-﻿using System;
+﻿using SimCorp.IMS.CSharpPrepCourse.BL.ConsoleUserInterface;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SimCorp.IMS.CSharpPrepCourse.BL.Battery
 {
     public class BatteryLiPol : BatteryBase
     {
-        public BatteryLiPol(int? capacity, string manufacturer) : base(capacity, manufacturer)
+        private IOutput Output;
+        public BatteryLiPol(int? capacity, string manufacturer, IOutput output) : base(capacity, manufacturer)
         {
+            Output = output;
+            Output.WriteLine($"Setting {nameof(BatteryLiPol)} to Mobile Phone");
+        }
 
+        public override void InstallBattery()
+        {
+            Output.WriteLine($"{nameof(BatteryLiPol)} now is supply power to Mobile Phone\n");
         }
 
         public override string ToString()

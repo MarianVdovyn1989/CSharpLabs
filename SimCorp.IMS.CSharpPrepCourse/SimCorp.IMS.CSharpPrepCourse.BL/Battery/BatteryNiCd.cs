@@ -1,16 +1,22 @@
-﻿using System;
+﻿using SimCorp.IMS.CSharpPrepCourse.BL.ConsoleUserInterface;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SimCorp.IMS.CSharpPrepCourse.BL.Battery
 {
     public class BatteryNiCd : BatteryBase
     {
-        public BatteryNiCd(int? capacity, string manufacturer) : base(capacity, manufacturer)
+        IOutput Output;
+        public BatteryNiCd(int? capacity, string manufacturer, IOutput output) : base(capacity, manufacturer)
         {
+            Output = output;
+            Output.WriteLine($"Setting {nameof(BatteryNiCd)} to Mobile Phone");
+        }
 
+        public override void InstallBattery()
+        {
+            Output.WriteLine($"{nameof(BatteryNiCd)} now is supply power to Mobile Phone\n");
         }
 
         public override string ToString()

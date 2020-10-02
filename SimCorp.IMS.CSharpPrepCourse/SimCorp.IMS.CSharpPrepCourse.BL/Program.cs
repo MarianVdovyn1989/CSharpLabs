@@ -10,7 +10,14 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
+            MobilePhone simCorpMobile = SimCorpMobile.Instance;
+            //Console.WriteLine(simCorpMobile.GetMobileComponentsDescription());
+
+            //simCorpMobile.ScreenTouchComp.Touch(simCorpMobile.ScreenTouchComp);
+            //simCorpMobile.Play(simCorpMobile.PlaybackComp);
+            //simCorpMobile.Charge(simCorpMobile.BatteryChargerComp);
+
+            Console.ReadLine();
         }
     }
 }

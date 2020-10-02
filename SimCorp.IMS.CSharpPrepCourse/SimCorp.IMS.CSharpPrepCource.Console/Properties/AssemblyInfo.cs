@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SimCorp.IMS.CSharpPrepCourse.BL")]
+[assembly: AssemblyTitle("SimCorp.IMS.CSharpPrepCource.Console")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SimCorp.IMS.CSharpPrepCourse.BL")]
+[assembly: AssemblyProduct("SimCorp.IMS.CSharpPrepCource.Console")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("735dd589-4d9b-47ab-be16-5c7ffaadc2ed")]
+[assembly: Guid("0cb52260-0c97-4d86-8d00-3157b4204c07")]
 
 // Version information for an assembly consists of the following four values:
 //

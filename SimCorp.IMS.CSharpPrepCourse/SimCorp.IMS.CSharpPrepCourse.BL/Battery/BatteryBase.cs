@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SimCorp.IMS.CSharpPrepCourse.BL.Battery
 {
-    public abstract class BatteryBase
+    public abstract class BatteryBase : IBattery
     {
         #region Constructor
         public BatteryBase(int? capacity, string manufacturer)
@@ -22,24 +20,20 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Battery
         public string Manufacturer
         {
             get { return _manufacturer; }
-
             private set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                {
                     _manufacturer = "Unknown but very reliable"; //def value;
-
-                }
                 else
-                {
                     _manufacturer = value;
-                }
             }
         }
         #endregion
 
         #region Methods
         public override abstract string ToString();
+
+        public abstract void InstallBattery();
         #endregion
     }
 }
