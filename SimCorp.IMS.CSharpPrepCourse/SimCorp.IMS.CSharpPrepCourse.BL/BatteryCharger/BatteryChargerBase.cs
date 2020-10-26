@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SimCorp.IMS.CSharpPrepCourse.BL.BatteryCharger
+﻿namespace SimCorp.IMS.CSharpPrepCourse.BL.BatteryCharger
 {
     public abstract class BatteryChargerBase:ICharger
     {

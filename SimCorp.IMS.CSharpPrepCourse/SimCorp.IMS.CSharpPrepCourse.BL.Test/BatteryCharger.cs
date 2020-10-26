@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SimCorp.IMS.CSharpPrepCourse.BL.BatteryCharger;
 using SimCorp.IMS.CSharpPrepCourse.BL.ConsoleUserInterface;
 
@@ -21,7 +20,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
                     Text += "\n";
                 }
             }
-            public string GetText()
+            public string GetOutputAsText()
             {
                 return Text;
             }
@@ -37,7 +36,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var appleFastCharge = new AppleFastCharge(inductiveCharge:true,BatteryChargerBase._ChargingTechnology.Apple_FastCharge, fakeOutput);
             appleFastCharge.Charge();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Charge_HuaweiSuperCharge2_0()
@@ -49,7 +48,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var charger = new HuaweiSuperCharge2_0(inductiveCharge: true, BatteryChargerBase._ChargingTechnology.Huawei_SuperCharge2_0, fakeOutput);
             charger.Charge();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Charge_MediaTekPumpExpress4_0()
@@ -61,7 +60,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var charger = new MediaTekPumpExpress4_0(inductiveCharge: true, BatteryChargerBase._ChargingTechnology.MediaTek_PumpExpress4_0, fakeOutput);
             charger.Charge();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Charge_MotorolaTurboPower30()
@@ -73,7 +72,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var charger = new MotorolaTurboPower30(inductiveCharge: true, BatteryChargerBase._ChargingTechnology.Motorola_TurboPower30, fakeOutput);
             charger.Charge();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Charge_OnePlusWarpCharge30()
@@ -85,7 +84,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var charger = new OnePlusWarpCharge30(inductiveCharge: true, BatteryChargerBase._ChargingTechnology.OnePlus_WarpCharge30, fakeOutput);
             charger.Charge();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Charge_OppoSuperVOOC()
@@ -97,7 +96,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var charger = new OppoSuperVOOC(inductiveCharge: true, BatteryChargerBase._ChargingTechnology.Oppo_SuperVOOC, fakeOutput);
             charger.Charge();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Charge_SamsungAdaptiveFastCharger()
@@ -109,7 +108,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var charger = new SamsungAdaptiveFastCharger(inductiveCharge: true, BatteryChargerBase._ChargingTechnology.Samsung_AdaptiveFastCharger, fakeOutput);
             charger.Charge();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Charge_USB2_0()
@@ -121,7 +120,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var charger = new USB2_0(inductiveCharge: true, BatteryChargerBase._ChargingTechnology.USB2_0, fakeOutput);
             charger.Charge();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Charge_USB3_0()
@@ -133,7 +132,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var charger = new USB3_0(inductiveCharge: true, BatteryChargerBase._ChargingTechnology.USB3_0, fakeOutput);
             charger.Charge();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
     }
 }

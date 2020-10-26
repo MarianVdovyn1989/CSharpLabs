@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SimCorp.IMS.CSharpPrepCourse.GUI
@@ -16,7 +13,11 @@ namespace SimCorp.IMS.CSharpPrepCourse.GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Lab#2
+            //Application.Run(new PlaybackForm());
+
+            //Lab#3
+            Application.Run(new SMSForm());
         }
     }
 }

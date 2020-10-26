@@ -1,9 +1,6 @@
 ﻿using SimCorp.IMS.CSharpPrepCourse.BL.ConsoleUserInterface;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SimCorp.IMS.CSharpPrepCourse.BL.MobileComponentFactory
 {
@@ -14,7 +11,8 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.MobileComponentFactory
         {
             Output = output;
         }
-        public int SelectComponentIndex()
+
+        private int GetComponentIndex()
         {
             while (true)
             {
@@ -25,33 +23,37 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.MobileComponentFactory
                 Console.Write(OptionBuilder);
 
                 var line = Console.ReadLine();
-                Exception Ex = null;
-                int Index = 0;
                 try
                 {
                     //convert to integer
                     var index = int.Parse(line);
                     //check that int value is within the specified range of current method
                     //method inherited from abstract class - not unique
-                    Index = ValidateUserInputIndex(index, OptionBuilder);
+                    int Index = ValidateUserInputIndex(index, OptionBuilder);
+                    Output.WriteLine(ConsoleOutput.ReturnSelectedOption(OptionBuilder, Index) + "\n");
                     return Index;
                 }
-                catch (ArgumentException ex)
+                catch (Exception ex)
                 {
                     Output.WriteLine(ex.Message);
-                    Ex = ex;
-                }
-                catch (FormatException ex)
-                {
-                    Output.WriteLine(ex.Message);
-                    Ex = ex;
-                }
-                finally
-                {
-                    Output.WriteLine(ConsoleOutput.ReturnSelectedOption(OptionBuilder, Ex, Index) + "\n");
                 }
             }
         }
+
+        public int SelectComponentIndex()
+        {
+            while (true)
+            {
+                int index = GetComponentIndex();
+                if (index == ErrorCode)
+                {
+                    continue;
+                }
+                return index;
+            }
+        }
+        private int ErrorCode = -1;
+
         private int ValidateUserInputIndex(int index, StringBuilder OptionBuilder)
         {
             int LastOption = OptionBuilder.ToString().Split('\n').Length - 2;

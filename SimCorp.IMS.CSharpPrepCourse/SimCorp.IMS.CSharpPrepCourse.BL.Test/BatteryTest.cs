@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SimCorp.IMS.CSharpPrepCourse.BL.Battery;
 using SimCorp.IMS.CSharpPrepCourse.BL.ConsoleUserInterface;
 
@@ -15,7 +14,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             {
                 Text = text;
             }
-            public string GetText()
+            public string GetOutputAsText()
             {
                 return Text;
             }
@@ -32,7 +31,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var batteryLiIon = new BatteryLiIon(capacity: 666, "", fakeOutput);
             batteryLiIon.InstallBattery();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
 
         }
         [TestMethod]
@@ -46,7 +45,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var batteryLiPol = new BatteryLiPol(capacity: 666, "", fakeOutput);
             batteryLiPol.InstallBattery();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
 
         }
         [TestMethod]
@@ -60,7 +59,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var batteryNiCd = new BatteryNiCd(capacity: 666, "", fakeOutput);
             batteryNiCd.InstallBattery();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
 
         }
         [TestMethod]
@@ -73,7 +72,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var batteryNiMH = new BatteryNiMH(capacity: 666, "", fakeOutput);
             batteryNiMH.InstallBattery();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
     }
 }

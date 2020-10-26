@@ -1,7 +1,4 @@
 ﻿using SimCorp.IMS.CSharpPrepCourse.BL.ConsoleUserInterface;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SimCorp.IMS.CSharpPrepCourse.BL.Battery
 {
@@ -21,7 +18,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Battery
 
         public override string ToString()
         {
-            return nameof(BatteryLiIon).ToString();
+            return nameof(BatteryLiIon);
         }
     }
 }

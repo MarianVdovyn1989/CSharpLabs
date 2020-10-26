@@ -1,6 +1,6 @@
 ﻿namespace SimCorp.IMS.CSharpPrepCourse.GUI
 {
-    partial class Form1
+    partial class PlaybackForm
     {
         /// <summary>
         /// Required designer variable.
@@ -163,7 +163,7 @@
             this.lText.TabIndex = 9;
             this.lText.Text = "Please select playback component for your phone";
             // 
-            // Form1
+            // PlaybackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -178,8 +178,9 @@
             this.Controls.Add(this.rbAirPods);
             this.Controls.Add(this.tbOutput);
             this.Controls.Add(this.bApply);
-            this.Name = "Form1";
+            this.Name = "PlaybackForm";
             this.Text = "SimCorp Mobile App";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

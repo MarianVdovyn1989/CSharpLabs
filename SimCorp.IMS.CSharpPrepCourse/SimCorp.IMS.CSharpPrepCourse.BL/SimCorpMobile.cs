@@ -1,11 +1,5 @@
 ﻿using SimCorp.IMS.CSharpPrepCourse.BL;
-using SimCorp.IMS.CSharpPrepCourse.BL.Battery;
-using SimCorp.IMS.CSharpPrepCourse.BL.BatteryCharger;
-using SimCorp.IMS.CSharpPrepCourse.BL.Playback;
-using SimCorp.IMS.CSharpPrepCourse.BL.Screen;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SimCorp.IMS.CSharpPrepCourse
 {
@@ -49,10 +43,5 @@ namespace SimCorp.IMS.CSharpPrepCourse
         #region Properties
 
         #endregion
-
-
-
-
-
     }
 }

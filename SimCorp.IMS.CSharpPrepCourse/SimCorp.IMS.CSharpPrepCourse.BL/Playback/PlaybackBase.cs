@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SimCorp.IMS.CSharpPrepCourse.BL.Playback
 {
@@ -19,7 +15,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Playback
             get { return _volume; }
             set
             {
-                if (value >= 0 || value <= 100)
+                if (value >= 0 && value <= 100)
                 {
                     _volume = value;
                 }
@@ -30,7 +26,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Playback
             }
         }
 
-        public abstract void Play();
+        public abstract void Play(string text);
 
         public override abstract string ToString();
     }

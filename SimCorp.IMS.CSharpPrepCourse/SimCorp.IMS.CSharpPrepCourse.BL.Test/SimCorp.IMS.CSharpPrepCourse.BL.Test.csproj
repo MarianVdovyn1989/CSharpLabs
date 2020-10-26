@@ -57,6 +57,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Compile Include="SMSFormatterTest.cs" />
+    <Compile Include="SMSProviderTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SimCorp.IMS.CSharpPrepCourse.BL\SimCorp.IMS.CSharpPrepCourse.BL.csproj">

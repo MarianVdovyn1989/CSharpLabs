@@ -14,10 +14,10 @@ using System.Windows.Forms;
 
 namespace SimCorp.IMS.CSharpPrepCourse.GUI
 {
-    public partial class Form1 : Form, IOutput
+    public partial class PlaybackForm : Form, IOutput
     {
         IOutput WinForm;
-        public Form1()
+        public PlaybackForm()
         {
             InitializeComponent();
             WinForm = new TextBox(tbOutput);
@@ -142,6 +142,11 @@ namespace SimCorp.IMS.CSharpPrepCourse.GUI
         }
 
         private void rbPhoneSpeaker_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

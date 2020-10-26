@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -95,6 +96,8 @@
     <Compile Include="Screen\ScreenTouchBase.cs" />
     <Compile Include="Screen\SurfaceAcousticWave.cs" />
     <Compile Include="SimCorpMobile.cs" />
+    <Compile Include="SMSFormatter.cs" />
+    <Compile Include="SMSProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

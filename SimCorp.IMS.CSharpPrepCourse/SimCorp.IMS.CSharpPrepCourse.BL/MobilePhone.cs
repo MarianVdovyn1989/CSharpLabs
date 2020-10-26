@@ -2,10 +2,6 @@
 using SimCorp.IMS.CSharpPrepCourse.BL.BatteryCharger;
 using SimCorp.IMS.CSharpPrepCourse.BL.Playback;
 using SimCorp.IMS.CSharpPrepCourse.BL.Screen;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
 
 namespace SimCorp.IMS.CSharpPrepCourse.BL
 {
@@ -17,6 +13,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL
         public IScreenTouch TouchScreen { get; set; }
         public IScreen DisplayScreen { get; set; }
         public ICharger Charger { get; set; }
+        public SMSProvider SMSModule { get; set; }
         #endregion
 
         #region Methods
@@ -26,7 +23,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL
         }
         public void Play()
         {
-            Playback.Play();
+            Playback.Play("Do you hear this sound? Me too");
         }
         public void Charge()
         {

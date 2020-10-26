@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimCorp.IMS.CSharpPrepCourse.BL.Screen
+﻿namespace SimCorp.IMS.CSharpPrepCourse.BL.Screen
 {
     public abstract class ScreenTouchBase : ScreenBase, IScreenTouch
     {

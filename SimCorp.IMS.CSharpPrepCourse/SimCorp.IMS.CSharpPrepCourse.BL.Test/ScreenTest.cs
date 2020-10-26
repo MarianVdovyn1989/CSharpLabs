@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SimCorp.IMS.CSharpPrepCourse.BL.ConsoleUserInterface;
 using SimCorp.IMS.CSharpPrepCourse.BL.Screen;
 
@@ -21,7 +20,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
                     Text += "\n";
                 }
             }
-            public string GetText()
+            public string GetOutputAsText()
             {
                 return Text;
             }
@@ -34,7 +33,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             {
                 Text = text;
             }
-            public string GetText()
+            public string GetOutputAsText()
             {
                 return Text;
             }
@@ -50,7 +49,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var screen = new AcousticPulseRecognition(pixelHeight: 320,pixelWidth:480,2.3,1, fakeOutput);
             screen.Show();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Show_Capacitive()
@@ -62,7 +61,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var screen = new Capacitive(pixelHeight: 320, pixelWidth: 480, 2.3, 1, fakeOutput);
             screen.Show();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Show_Infrared()
@@ -74,7 +73,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var screen = new Infrared(pixelHeight: 320, pixelWidth: 480, 2.3, 1, fakeOutput);
             screen.Show();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Show_OpticalImaging()
@@ -86,7 +85,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var screen = new OpticalImaging(pixelHeight: 320, pixelWidth: 480, 2.3, 1, fakeOutput);
             screen.Show();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Show_Resistive()
@@ -98,7 +97,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var screen = new Resistive(pixelHeight: 320, pixelWidth: 480, 2.3, fakeOutput);
             screen.Show();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Show_ScreenNoTouch()
@@ -110,7 +109,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var screen = new ScreenNoTouch(pixelHeight: 320, pixelWidth: 480, 2.3, fakeOutput);
             screen.Show();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Show_SurfaceAcousticWave()
@@ -122,7 +121,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var screen = new SurfaceAcousticWave(pixelHeight: 320, pixelWidth: 480, 2.3,5, fakeOutput);
             screen.Show();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Touch_AcousticPulseRecognition()
@@ -134,7 +133,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var screen = new AcousticPulseRecognition(pixelHeight: 320, pixelWidth: 480, 2.3, 1, fakeOutput);
             screen.Touch();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Touch_Capacitive()
@@ -146,7 +145,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var screen = new Capacitive(pixelHeight: 320, pixelWidth: 480, 2.3, 1, fakeOutput);
             screen.Touch();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Touch_Infrared()
@@ -158,7 +157,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var screen = new Infrared(pixelHeight: 320, pixelWidth: 480, 2.3, 1, fakeOutput);
             screen.Touch();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Touch_OpticalImaging()
@@ -170,7 +169,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var screen = new OpticalImaging(pixelHeight: 320, pixelWidth: 480, 2.3, 1, fakeOutput);
             screen.Touch();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Touch_Resistive()
@@ -182,7 +181,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var screen = new Resistive(pixelHeight: 320, pixelWidth: 480, 2.3, fakeOutput);
             screen.Touch();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
         [TestMethod]
         public void Touch_SurfaceAcousticWave()
@@ -194,7 +193,7 @@ namespace SimCorp.IMS.CSharpPrepCourse.BL.Test
             var screen = new SurfaceAcousticWave(pixelHeight: 320, pixelWidth: 480, 2.3, 5, fakeOutput);
             screen.Touch();
             //Assert
-            Assert.AreEqual(expected, fakeOutput.GetText());
+            Assert.AreEqual(expected, fakeOutput.GetOutputAsText());
         }
     }
 }
